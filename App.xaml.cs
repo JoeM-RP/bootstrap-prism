@@ -12,8 +12,6 @@ namespace PrismForms
         public App()
         {
             InitializeComponent();
-
-            //MainPage = new PrismFormsPage();
         }
 
         /// <summary>

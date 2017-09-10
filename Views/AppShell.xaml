@@ -2,7 +2,7 @@
 <MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="PrismForms.Views.AppShell" xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms" prism:ViewModelLocator.AutowireViewModel="True">
     <MasterDetailPage.Master>
         <!-- Be mindful of the Title and Icon properties; they are required -->
-        <NavigationPage Title="Required" Icon="slideout.png" BarTextColor="White" BarBackgroundColor="#6D6D70">
+        <NavigationPage Title="Required" Icon="slideout.png" BarTextColor="White" BarBackgroundColor="#87A3BA">
             <x:Arguments>
                 <ContentPage Title="{Binding Title}" BackgroundColor="#F4F4F4">
                     <ListView Grid.Row="1" ItemsSource="{Binding MenuItems}" HasUnevenRows="true" SeparatorVisibility="None" SelectedItem="{Binding SelectedItem, Mode=TwoWay}" BackgroundColor="Transparent">
