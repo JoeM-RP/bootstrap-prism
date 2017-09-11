@@ -25,7 +25,8 @@ namespace PrismForms
 
         /// <summary>
         /// With Prism, we navigate using a URI format to preserve the stack. We can also
-        /// reset or rearrage the stack by manipulating the URI
+        /// reset or rearrage the stack by manipulating the URI, or perform "deep linking"
+        /// when the app is launched with parameters (i.e - email link, push notification, etc)
         /// </summary>
 		protected override void OnInitialized()
 		{
