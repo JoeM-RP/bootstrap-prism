@@ -75,6 +75,12 @@ namespace PrismForms.ViewModels
 			});
 		}
 
+        /// <summary>
+        /// Navigate the specified args. Since we are triggering navigation outside the Detail view, we specify the URI "path"
+        /// of the new page we are navigating to
+        /// </summary>
+        /// <returns>The navigate.</returns>
+        /// <param name="args">Arguments.</param>
 		private void Navigate(NavigationMenuItem args)
 		{
 			switch (args.Key)
@@ -84,7 +90,7 @@ namespace PrismForms.ViewModels
 					break;
 				default:
                     this._navigationService.NavigateAsync($"Navigation/{nameof(Views.HomePage)}");
-                    break;;
+                    break;
 			}
 		}
 	}
