@@ -62,42 +62,35 @@ namespace PrismForms.ViewModels
          */
         private async Task ShowAlert()
         {
-            await _dialogService.DisplayAlertAsync("Yikes!", "This is a fake error to demonstrate the alert", "Retry", "Cancel").ContinueWith(
-                response =>
-                {
-                    if (response.Result)
-                    {
-                        // TODO: If response is true, the user wants to "retry" the action. 
-                        // Do something here to attempt the action again
-                    }
-                    else
-                    {
-                        // TODO: If response is false, the user has canceled the attempted action
-                        // So perform an action here that makes sense; we may want to naviagte to 
-                        // a previous page or just sit idle
-                    }
-                });
+            var response = await _dialogService.DisplayAlertAsync("Yikes!", "This is a fake error to demonstrate the alert", "Retry", "Cancel");
+
+            if (response)
+            {
+                // TODO: If response is true, the user wants to "retry" the action. 
+                // Do something here to attempt the action again
+            }
+            else
+            {
+                // TODO: If response is false, the user has canceled the attempted action
+                // So perform an action here that makes sense; we may want to naviagte to 
+                // a previous page or just sit idle
+            }
         }
 
         private async Task ShowActionSheet()
         {
-            await _dialogService.DisplayActionSheetAsync("Actions", "Cancel", "Destroy", new string[] { "Action1", "Action2" }).ContinueWith(
-                response =>
-                {
-                    // TODO: Like with the Error Dialog, we want to perform different actions based on the user selection
-                    switch (response.Result)
-                    {
-                        case ("Action1"):
-                        case ("Action2"):
-                        default:
-                            // Be careful here - because of how we've set up the callback, 
-                            // we need to explicity run our action on the UI Thread 
-                            Xamarin.Forms.Device.BeginInvokeOnMainThread(
-                                () => _dialogService.DisplayAlertAsync("I did it!", $"Selected {response.Result}", "Ok")
-                            );
-                            break;
-                    }
-                });
+
+            var response = await _dialogService.DisplayActionSheetAsync("Actions", "Cancel", "Destroy", new string[] { "Action1", "Action2" });
+
+            // TODO: Like with the Error Dialog, we want to perform different actions based on the user selection
+            switch (response)
+            {
+                case ("Action1"):
+                case ("Action2"):
+                default:
+                    await _dialogService.DisplayAlertAsync("I did it!", $"Selected {response}", "Ok");
+                    break;
+            }
         }
 
         private async void Navigate(CopyItem parameter)
@@ -106,7 +99,7 @@ namespace PrismForms.ViewModels
             // the resulting page would lookup/resolve via a service 
             await _navigationService.NavigateAsync($"{nameof(Views.SamplePage)}?subject={parameter.Title}&content={parameter.Body}");
 
-            // Or, we can decalre them explicity using a strongly typed object, which is ideal for passing 
+            // Or, we can declare them explicity using a strongly typed object, which is ideal for passing 
             // a more complex model that the next page won't lookup on its own
             /*
 			var payload = new NavigationParameters();
