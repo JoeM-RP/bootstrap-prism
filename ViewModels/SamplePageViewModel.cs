@@ -42,7 +42,7 @@ namespace PrismForms.ViewModels
 		/*
          * Define Methods
          */
-        public override void OnNavigatedTo(NavigationParameters parameters)
+        public override void OnNavigatingTo(NavigationParameters parameters)
         {
             this.Copy = parameters.GetValue<string>("content");
             this.Subject = parameters.GetValue<string>("subject");
