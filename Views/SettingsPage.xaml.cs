@@ -10,6 +10,8 @@ namespace PrismForms.Views
         public SettingsPage()
         {
             InitializeComponent();
+
+            SampleEntry.Effects.Add(Effect.Resolve("EffectsSample.SampleEntryEffect"));
         }
     }
 }
