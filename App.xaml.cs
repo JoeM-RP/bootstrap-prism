@@ -9,11 +9,6 @@ namespace PrismForms
     {
 		public static new App Current => Application.Current as App;
 
-        public App()
-        {
-            InitializeComponent();
-        }
-
         /// <summary>
         /// Logging provided by <see cref="Prism.Logging"/>
         /// </summary>
@@ -30,6 +25,8 @@ namespace PrismForms
         /// </summary>
 		protected override void OnInitialized()
 		{
+            InitializeComponent();
+
             NavigationService.NavigateAsync($"Root/Navigation/{nameof(Views.HomePage)}", animated: false);
 		}
 

@@ -26,8 +26,8 @@ namespace PrismForms.Views
     {
         public AppShellNavigationPage()
         {
-            BarTextColor = Color.White;
-            BarBackgroundColor = Color.FromHex("#394A76");
+            BarTextColor = (Color)App.Current.Resources["White"];
+            BarBackgroundColor = (Color) App.Current.Resources["BrandColor"];
         }
 
         public bool ClearNavigationStackOnNavigation
