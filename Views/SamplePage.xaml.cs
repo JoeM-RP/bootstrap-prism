@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 
 using Xamarin.Forms;
+using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 
 namespace PrismForms.Views
 {
@@ -10,6 +11,8 @@ namespace PrismForms.Views
         public SamplePage()
         {
             InitializeComponent();
+
+            On<Xamarin.Forms.PlatformConfiguration.iOS>().SetUseSafeArea(true);
         }
     }
 }

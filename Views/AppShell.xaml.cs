@@ -2,11 +2,17 @@
 using System.Collections.Generic;
 using Prism.Navigation;
 using Xamarin.Forms;
+using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 
 namespace PrismForms.Views
 {
     public partial class AppShell : MasterDetailPage, IMasterDetailPageOptions
     {
+        public AppShell()
+        {
+            InitializeComponent();
+        }
+
         /// <summary>
         /// Gets a value indicating whether this <see cref="T:PrismForms.Views.AppShell"/> is presented after navigation.
         /// </summary>
@@ -15,14 +21,9 @@ namespace PrismForms.Views
         /// </remarks>
         /// <value><c>true</c> if is presented after navigation; otherwise, <c>false</c>.</value>
         public bool IsPresentedAfterNavigation => Device.Idiom != TargetIdiom.Phone;
-
-        public AppShell()
-        {
-            InitializeComponent();
-        }
     }
 
-    public class AppShellNavigationPage : NavigationPage, INavigationPageOptions, IDestructible
+    public class AppShellNavigationPage : Xamarin.Forms.NavigationPage, INavigationPageOptions, IDestructible
     {
         public AppShellNavigationPage()
         {

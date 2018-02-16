@@ -27,7 +27,7 @@ namespace PrismForms
 		{
             InitializeComponent();
 
-            NavigationService.NavigateAsync($"Root/Navigation/{nameof(Views.HomePage)}", animated: false);
+            NavigationService.NavigateAsync($"myapp:///Root/Navigation/{nameof(Views.HomePage)}", animated: false);
 		}
 
         /// <summary>
