@@ -116,12 +116,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\PrismForms.csproj">
-      <Project>{16955A3C-9E3F-4DAC-AF7B-596402CEBAE7}</Project>
-      <Name>PrismForms</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\Contents.json" />
   </ItemGroup>
@@ -150,6 +144,12 @@
     <BundleResource Include="Resources\settings%402x.png" />
     <BundleResource Include="Resources\slideout.png" />
     <BundleResource Include="Resources\slideout%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PrismForms\PrismForms.csproj">
+      <Project>{16955A3C-9E3F-4DAC-AF7B-596402CEBAE7}</Project>
+      <Name>PrismForms</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.2.5.0.280555\build\netstandard1.0\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.5.0.280555\build\netstandard1.0\Xamarin.Forms.targets')" />
