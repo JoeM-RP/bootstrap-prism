@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismForms", "PrismForms\PrismForms.csproj", "{16955A3C-9E3F-4DAC-AF7B-596402CEBAE7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismForms.iOS", "iOS\PrismForms.iOS.csproj", "{F5DBC3D5-EBE3-4469-A1C5-BD4C96CF2B5B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismForms.iOS", "PrismForms.iOS\PrismForms.iOS.csproj", "{F5DBC3D5-EBE3-4469-A1C5-BD4C96CF2B5B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismForms.Droid", "Droid\PrismForms.Droid.csproj", "{62641B4D-AAA0-4880-8205-DEE103604451}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismForms.Droid", "PrismForms.Droid\PrismForms.Droid.csproj", "{62641B4D-AAA0-4880-8205-DEE103604451}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
