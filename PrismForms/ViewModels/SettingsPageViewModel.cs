@@ -65,5 +65,20 @@ namespace PrismForms.ViewModels
 
             return true;
         }
-	}
+
+        public override void OnNavigatedFrom(INavigationParameters parameters)
+        {
+            // Intentionally empty
+        }
+
+        public override void OnNavigatedTo(INavigationParameters parameters)
+        {
+            // Intentionally empty
+        }
+
+        public override void OnNavigatingTo(INavigationParameters parameters)
+        {
+            // Intentionally empty
+        }
+    }
 }

@@ -13,7 +13,7 @@ namespace PrismForms.ViewModels
 		private ObservableCollection<string> _errors;
         protected INavigationService _navigationService { get; }
 
-		/* 
+		/* s
          * Define Properties
          */
 		private string _title;
@@ -49,22 +49,17 @@ namespace PrismForms.ViewModels
 			_navigationService = navigationService;
 		}
 
-		/*
+        /*
          * Define Methods
          */
-        public virtual void OnNavigatedFrom(NavigationParameters parameters)
-		{
-            // Do something cool here when we naviagte away from the ViewModel
-		}
 
-		public virtual void OnNavigatedTo(NavigationParameters parameters)
-		{
-            // Do something cool here when we have finished navigating to the ViewModel
-		}
+        // Do something cool here when we naviagte away from the ViewModel
+        public abstract void OnNavigatedFrom(INavigationParameters parameters);
 
-		public virtual void OnNavigatingTo(NavigationParameters parameters)
-		{
-            // Do something cool here when we start navigating to the ViewModel
-		}
-	}
+        // Do something cool here when we have finished navigating to the ViewModel
+        public abstract void OnNavigatedTo(INavigationParameters parameters);
+
+        // Do something cool here when we start navigating to the ViewModel
+        public abstract void OnNavigatingTo(INavigationParameters parameters);
+    }
 }

@@ -39,13 +39,23 @@ namespace PrismForms.ViewModels
             this.Title = "Sample Page";
         }
 
-		/*
+        /*
          * Define Methods
          */
-        public override void OnNavigatingTo(NavigationParameters parameters)
+        public override void OnNavigatedFrom(INavigationParameters parameters)
+        {
+            // Intentionally empty
+        }
+
+        public override void OnNavigatedTo(INavigationParameters parameters)
         {
             this.Copy = parameters.GetValue<string>("content");
             this.Subject = parameters.GetValue<string>("subject");
+        }
+
+        public override void OnNavigatingTo(INavigationParameters parameters)
+        {
+            // Intentionally empty
         }
     }
 }
